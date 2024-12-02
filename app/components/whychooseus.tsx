@@ -1,80 +1,84 @@
+"use client"
+
 import Image from "next/image"
+import { Cinzel } from 'next/font/google'
+
+const cinzel = Cinzel({
+    subsets: ['latin'],
+    weight: ['400', '700'],
+    display: 'swap',
+})
+
+const features = [
+    {
+        image: "/images/why choose us 1.png",
+        imageAlt: "Bride in wedding dress holding bouquet"
+    },
+    {
+      number: "1",
+      title: "Personalized Service",
+      description: "Tailored experiences to suit your unique vision.",
+    },
+    {
+        image: "/images/why choose us 3.png",
+        imageAlt: "Wedding table decorations with flowers"
+    },
+    {
+        number: "2",
+      title: "Experienced Professionals",
+      description: "Our team is dedicated to making your day unforgettable.",
+    },
+    {
+        image: "/images/why choose us 2.png",
+        imageAlt: "Wedding planner discussing with couple"
+    },
+    {
+        number: "3",
+      title: "Wide Selection of Venues and Services",
+      description: "From venues to florals, we offer everything you need.",
+    }
+]
 
 export default function WhyChooseUs() {
-  return (
-    <section className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
-      <div className="text-center mb-16">
-        <h2 className="text-4xl font-serif font-bold mb-4">WHY CHOOSE US?</h2>
-        <p className="text-lg text-gray-600">
-          Discover why we&apos;re the perfect partner for your special day.
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {/* Feature 1 */}
-        <div className="space-y-6">
-          <div className="relative aspect-[3/4] w-full">
-            <Image
-              src="/placeholder.svg?height=600&width=450"
-              alt="Bride in wedding dress"
-              fill
-              className="object-cover rounded-lg"
-            />
-          </div>
-          <div className="text-center">
-            <span className="text-6xl font-serif text-[#B8860B] font-bold">1</span>
-            <h3 className="text-xl font-serif font-bold mt-4 mb-2">
-              PERSONALIZED SERVICE
-            </h3>
-            <p className="text-gray-600">
-              Tailored experiences to suit your unique vision.
-            </p>
-          </div>
-        </div>
-
-        {/* Feature 2 */}
-        <div className="space-y-6">
-          <div className="text-center order-2 lg:order-1">
-            <span className="text-6xl font-serif text-[#B8860B] font-bold">2</span>
-            <h3 className="text-xl font-serif font-bold mt-4 mb-2">
-              EXPERIENCED PROFESSIONALS
-            </h3>
-            <p className="text-gray-600">
-              Our team is dedicated to making your day unforgettable.
-            </p>
-          </div>
-          <div className="relative aspect-[3/4] w-full order-1 lg:order-2">
-            <Image
-              src="/placeholder.svg?height=600&width=450"
-              alt="Table setting with flowers"
-              fill
-              className="object-cover rounded-lg"
-            />
-          </div>
-        </div>
-
-        {/* Feature 3 */}
-        <div className="space-y-6">
-          <div className="relative aspect-[3/4] w-full">
-            <Image
-              src="/placeholder.svg?height=600&width=450"
-              alt="Outdoor venue setup"
-              fill
-              className="object-cover rounded-lg"
-            />
-          </div>
-          <div className="text-center">
-            <span className="text-6xl font-serif text-[#B8860B] font-bold">3</span>
-            <h3 className="text-xl font-serif font-bold mt-4 mb-2">
-              WIDE SELECTION OF VENUES AND SERVICES
-            </h3>
-            <p className="text-gray-600">
-              From venues to florals, we offer everything you need.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
+    return (
+        <section className="py-16">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-y-12 ">
+                    {features.map((feature, index) => (
+                        <div key={index} className="flex flex-col h-full">
+                            {feature.image ? (
+                                <div className="relative aspect-square  flex-grow ">
+                                    <Image
+                                        src={feature.image}
+                                        alt={feature.imageAlt}
+                                        fill
+                                        className="object-cover rounded-lg"
+                                    />
+                                </div>
+                            ) : (
+                                <div className=" rounded-lg flex flex-col text-center h-full">
+                                    <span 
+                                        className={`${cinzel.className} text-6xl font-bold text-[#B17406] mb-4`}
+                                    >
+                                        {feature.number}
+                                    </span>
+                                    <div 
+                                        className="w-[132px] border-t-2 border-[#B17406] opacity-1 mx-auto mb-4"
+                                    ></div>
+                                    <h3 
+                                        className={`${cinzel.className} text-xl font-semibold text-[#1E1E1E] tracking-wide mb-4`}
+                                    >
+                                        {feature.title}
+                                    </h3>
+                                    <p className="text-gray-600">
+                                        {feature.description}
+                                    </p>
+                                </div>
+                            )}
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    )
 }
-

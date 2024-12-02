@@ -36,9 +36,9 @@ export default function ContactForm() {
   }
 
   return (
-    <section className="min-h-screen grid lg:grid-cols-2 bg-red-300">
+    <section className="h-[550px] max-w-7xl mx-auto grid lg:grid-cols-2 bg-red-300">
       {/* Form Section */}
-      <div className="flex flex-col p-8 lg:p-16 justify-center">
+      <div className="flex flex-col p-8 lg:p-16 justify-center h-[550px]">
         <div className="max-w-md">
           <p className={`${raleway.className} text-sm tracking-[0.2em] mb-2`}>
             CONTACT
@@ -95,16 +95,15 @@ export default function ContactForm() {
       </div>
 
       {/* Image Section */}
-      <div className="relative hidden lg:block">
+      <div className="relative hidden lg:block w-[450px] h-[550px]">
         <Image
-          src="/images/Rectangle 519.png"
+          src="/images/Get In touch.png"
           alt="Happy couple on their wedding day"
           fill
           className="object-cover"
-          priority
+          sizes="450px"
         />
       </div>
     </section>
   )
 }
-
