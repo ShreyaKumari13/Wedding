@@ -3,9 +3,7 @@
 import Image from "next/image"
 import { ArrowRight } from 'lucide-react'
 import { Cinzel } from 'next/font/google'
-import Slider from "react-slick"
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
+import { useState, useEffect } from 'react'
 
 const cinzel = Cinzel({
     subsets: ['latin'],
@@ -13,17 +11,30 @@ const cinzel = Cinzel({
     display: 'swap',
 })
 
-export default function HomeSection() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    arrows: true,
+const images = [
+  {
+    src: "/images/about us image 1.png",
+    alt: "Wedding rings"
+  },
+  {
+    src: "/images/about us image 2.png",
+    alt: "Wedding party"
+  },
+  {
+    src: "/images/about us image 3.png",
+    alt: "Table setting"
   }
+]
+
+export default function HomeSection() {
+  const [currentImage, setCurrentImage] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % images.length)
+    }, 3000)
+    return () => clearInterval(timer)
+  }, [])
 
   return (
     <div className="relative bg-white py-16">
@@ -56,38 +67,33 @@ export default function HomeSection() {
             </button>
           </div>
 
-          {/* Image Carousel */}
-          <div className="relative">
-            <div className="w-full max-w-xl mx-auto">
-              <Slider {...settings}>
-                <div>
-                  <Image
-                    src="/images/about us image 1.png"
-                    alt="Wedding rings"
-                    width={646}
-                    height={346}
-                    className="rounded-lg object-cover"
-                  />
-                </div>
-                <div>
-                  <Image
-                    src="/images/about us image 2.png"
-                    alt="Wedding party"
-                    width={646}
-                    height={346}
-                    className="rounded-lg object-cover"
-                  />
-                </div>
-                <div>
-                  <Image
-                    src="/images/about us image 3.png"
-                    alt="Table setting"
-                    width={646}
-                    height={346}
-                    className="rounded-lg object-cover"
-                  />
-                </div>
-              </Slider>
+          {/* Image Slider */}
+          <div className="relative w-full max-w-xl mx-auto">
+            <div className="relative h-[346px] w-full">
+              {images.map((image, index) => (
+                <Image
+                  key={image.src}
+                  src={image.src}
+                  alt={image.alt}
+                  width={646}
+                  height={346}
+                  className={`absolute top-0 left-0 rounded-lg object-cover transition-opacity duration-500 ${
+                    index === currentImage ? 'opacity-100' : 'opacity-0'
+                  }`}
+                  priority={index === 0}
+                />
+              ))}
+            </div>
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+              {images.map((_, index) => (
+                <button
+                  key={index}
+                  className={`w-2 h-2 rounded-full transition-colors ${
+                    index === currentImage ? 'bg-[#B17406]' : 'bg-gray-300'
+                  }`}
+                  onClick={() => setCurrentImage(index)}
+                />
+              ))}
             </div>
           </div>
         </div>
