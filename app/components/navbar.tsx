@@ -37,8 +37,16 @@ const Navbar = () => {
           </Link>
         </div>
 
+        {/* Mobile Menu Button */}
+        <button
+          onClick={toggleMenu}
+          className="lg:hidden text-white"
+        >
+          {isMenuOpen ? 'Close' : 'Menu'}
+        </button>
+
         {/* Desktop Menu Links */}
-        <ul className="hidden md:flex gap-10 text-[#F5F5F5] items-center">
+        <ul className={`hidden md:flex gap-10 text-[#F5F5F5] items-center ${isMenuOpen ? 'block' : 'hidden'}`}>
           <li>
             <Link 
               href="/" 
