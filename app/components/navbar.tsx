@@ -19,7 +19,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`fixed w-full bg-red-300 ${isMenuOpen ? 'h-screen' : ''}`}>
+    <nav className={`fixed w-full z-50 ${isMenuOpen ? 'h-screen' : ''}`}>
       <div className="container mx-auto flex justify-between items-center py-4 lg:px-32">
         {/* Logo */}
         <div className="flex items-center ">

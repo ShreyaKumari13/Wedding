@@ -18,7 +18,7 @@ export default function Homepage() {
                         quality={100}
                     />
                     {/* Dark overlay */}
-                    <div className="absolute inset-0 bg-black/30" />
+                    <div className="absolute inset-0 bg-black/20" />
                 </div>
                 {/* Content Container */}
                 <div className="relative z-10 h-full flex flex-col items-center justify-center text-white text-center px-4">
@@ -53,7 +53,7 @@ export default function Homepage() {
             <div className="bg-white">
                 <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
                     <h2 className="text-4xl md:text-5xl font-serif text-[#C17F12] text-center">
-                        Princess Wedding -
+                        Princess Wedding - RAm
                     </h2>
                     {/* Add additional content here */}
                 </div>
