@@ -1,7 +1,6 @@
 "use client"
 
 import Image from "next/image"
-import { ArrowRight } from 'lucide-react'
 import { Cinzel } from 'next/font/google'
 import { useState, useEffect } from 'react'
 
@@ -34,8 +33,7 @@ export default function HomeSection() {
       setCurrentImage((prev) => (prev + 1) % images.length)
     }, 2000)
     return () => clearInterval(timer)
-  }, [images.length])
-
+  }, []) 
 
   return (
     <div className="relative bg-white py-16">
@@ -64,7 +62,6 @@ export default function HomeSection() {
               className="group flex items-center border-2 border-[#B17406] rounded-full px-6 py-2 hover:bg-[#B17406] hover:text-white transition-colors"
             >
               <span>SEE MORE</span>
-              
             </button>
           </div>
 
@@ -72,7 +69,7 @@ export default function HomeSection() {
           <div className="relative w-full max-w-xl mx-auto">
             <div className="overflow-hidden relative">
               <div className="flex transition-transform duration-500" style={{ transform: `translateX(-${currentImage * 100}%)` }}>
-                {images.map((image, index) => (
+                {images.map((image) => (
                   <Image
                     key={image.src}
                     src={image.src}
