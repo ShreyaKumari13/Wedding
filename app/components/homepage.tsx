@@ -1,7 +1,6 @@
 'use client'
 
 import Image from 'next/image'
-import { Button } from "../components/ui/button"
 
 export default function Homepage() {
     return (
@@ -30,11 +29,11 @@ export default function Homepage() {
                         <p className="text-[32px] leading-[43.14px] font-[700] text-white text-center mb-8">
                             Creating Unforgettable Moments
                         </p>
-                        <Button
-                            className="bg-[#B17406] hover:bg-[#A66F10] text-white text-[24px] leading-[32.35px] font-[700] px-4 py-5  transition-colors duration-300"
+                        <button
+                            className="bg-[#B17406] hover:bg-[#A66F10] text-white text-[24px] leading-[32.35px] font-[700] px-4 py-2 transition-colors duration-300 rounded-lg"
                         >
                             Explore Our Services
-                        </Button>
+                        </button>
                     </div>
                 </div>
 
