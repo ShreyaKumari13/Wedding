@@ -3,13 +3,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
-import { Cinzel, Raleway } from 'next/font/google';
+import { Raleway } from 'next/font/google';
 import { Search } from 'lucide-react';
-
-const cinzel = Cinzel({
-  weight: '700',
-  subsets: ['latin'],
-});
 
 const raleway = Raleway({
   weight: ['300', '700'],
@@ -19,8 +14,12 @@ const raleway = Raleway({
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <nav className="fixed  w-full bg-red-300">
+    <nav className={`fixed w-full bg-red-300 ${isMenuOpen ? 'h-screen' : ''}`}>
       <div className="container mx-auto flex justify-between items-center py-4 lg:px-32">
         {/* Logo */}
         <div className="flex items-center ">
