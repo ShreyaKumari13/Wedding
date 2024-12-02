@@ -32,9 +32,10 @@ export default function HomeSection() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % images.length)
-    }, 3000)
+    }, 2000)
     return () => clearInterval(timer)
-  }, [])
+  }, [images.length])
+
 
   return (
     <div className="relative bg-white py-16">
@@ -63,26 +64,25 @@ export default function HomeSection() {
               className="group flex items-center border-2 border-[#B17406] rounded-full px-6 py-2 hover:bg-[#B17406] hover:text-white transition-colors"
             >
               <span>SEE MORE</span>
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              
             </button>
           </div>
 
-          {/* Image Slider */}
+          {/* Simple HTML Carousel with Dots */}
           <div className="relative w-full max-w-xl mx-auto">
-            <div className="relative h-[346px] w-full">
-              {images.map((image, index) => (
-                <Image
-                  key={image.src}
-                  src={image.src}
-                  alt={image.alt}
-                  width={646}
-                  height={346}
-                  className={`absolute top-0 left-0 rounded-lg object-cover transition-opacity duration-500 ${
-                    index === currentImage ? 'opacity-100' : 'opacity-0'
-                  }`}
-                  priority={index === 0}
-                />
-              ))}
+            <div className="overflow-hidden relative">
+              <div className="flex transition-transform duration-500" style={{ transform: `translateX(-${currentImage * 100}%)` }}>
+                {images.map((image, index) => (
+                  <Image
+                    key={image.src}
+                    src={image.src}
+                    alt={image.alt}
+                    width={646}
+                    height={346}
+                    className="rounded-lg object-cover flex-shrink-0 w-full"
+                  />
+                ))}
+              </div>
             </div>
             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
               {images.map((_, index) => (
