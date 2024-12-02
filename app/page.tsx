@@ -1,4 +1,5 @@
 import Homepage from "./components/homepage";
+import HomeSection from "./components/homesection";
 import Navbar from "./components/navbar";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <Homepage/>
       {/* <WhyChooseUs/> */}
       {/* <ContactForm /> */}
+      <HomeSection/>
     </main>
 
   );
