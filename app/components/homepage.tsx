@@ -1,6 +1,13 @@
 'use client'
 
 import Image from 'next/image'
+import { Cinzel } from 'next/font/google'
+
+const cinzel = Cinzel({
+    subsets: ['latin'],
+    weight: ['700'],
+    display: 'swap',
+})
 
 export default function Homepage() {
     return (
@@ -47,15 +54,24 @@ export default function Homepage() {
                         <path d="M0,120 C480,-40 960,-40 1440,120 L1440,120 L0,120 Z" />
                     </svg>
                 </div>
+
+                {/* Content Section */}
+                <div className="absolute bottom-0 left-0 right-0 z-30 transform translate-y-[60px]">
+                    <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+                        <h2 className={`${cinzel.className} text-[55px] font-[700] leading-[74.14px] text-center text-[#B17406]`}>
+                            Princess Wedding -
+                        </h2>
+                        {/* Add additional content here */}
+                    </div>
+                </div>
             </div>
 
-            {/* Content Section */}
-            <div className="bg-white">
-                <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
-                    <h2 className="text-4xl md:text-5xl font-serif text-[#C17F12] text-center">
-                        Princess Wedding - RAm
+            {/* Second Content Section */}
+            <div className="relative bg-white">
+                <div className="max-w-7xl mx-auto px-4  sm:px-6 lg:px-8">
+                    <h2 className={`${cinzel.className} text-[55px] font-[700] leading-[74.14px] text-center text-[#B17406]`}>
+                        Your Dream Wedding Awaits
                     </h2>
-                    {/* Add additional content here */}
                 </div>
             </div>
         </div>
