@@ -14,10 +14,9 @@ const raleway = Raleway({
 interface ButtonProps {
   children: React.ReactNode
   className?: string
-  size?: 'sm' | 'md' | 'lg'
 }
 
-function Button({ children, className = '', size = 'lg' }: ButtonProps) {
+function Button({ children, className = '' }: ButtonProps) {
   return (
     <button className={`inline-flex items-center justify-center ${className}`}>
       {children}
@@ -50,7 +49,6 @@ export default function ContactCTA() {
             <Link href="/contact">
               <Button 
                 className={`${raleway.className} bg-[#B17406] hover:bg-[#8B5D05] text-white px-12 py-4 text-[20px] font-[400] rounded-md transition-colors duration-200`}
-                size="lg"
               >
                 Contact Us
               </Button>

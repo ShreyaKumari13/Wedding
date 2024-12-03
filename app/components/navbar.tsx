@@ -17,7 +17,6 @@ const Navbar = () => {
   const pathname = usePathname();
 
   const getLinkStyle = (path: string) => {
-    const isActive = pathname === path;
     const isAboutPage = pathname === '/about';
 
     if (isAboutPage) {
