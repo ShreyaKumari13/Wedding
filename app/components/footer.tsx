@@ -10,18 +10,20 @@ const raleway = Raleway({
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1a2721] text-white mt-6 py-4 px-12">
+    <footer className="bg-[#1a2721] text-white  py-4 px-12">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between">
           {/* Logo */}
           <div className="mb-4 md:mb-0">
-            <Image 
-              src="/images/image 2.png"
-              alt="Princess Wedding Logo"
-              width={150}
-              height={60}
-              className="object-contain"
-            />
+            <Link href="/">
+              <Image 
+                src="/images/image 2.png"
+                alt="Princess Wedding Logo"
+                width={150}
+                height={60}
+                className="object-contain"
+              />
+            </Link>
           </div>
 
           {/* Navigation Links */}

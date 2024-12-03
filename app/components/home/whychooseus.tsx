@@ -11,7 +11,7 @@ const cinzel = Cinzel({
 
 const raleway = Raleway({
     subsets: ['latin'],
-    weight: '600',
+    weight: ['400', '600'],
     display: 'swap',
 })
 
@@ -47,7 +47,7 @@ const features = [
 
 export default function WhyChooseUs() {
     return (
-        <section className="py-16 pt-[200px]">
+        <section className="pb-16 pt-[20vh]">
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h1 className={`${cinzel.className} text-[45px] leading-[60.66px] tracking-[0.05em] text-center mb-6 text-[#1A281F]`}>
@@ -79,12 +79,12 @@ export default function WhyChooseUs() {
                                         className="w-[132px] border-t-2 border-[#B17406] opacity-1 mx-auto mb-4"
                                     ></div>
                                     <h3
-                                        className={`${cinzel.className} text-[27px] font-bold leading-[36.4px] text-center text-[#1A281F] mb-4`}
+                                        className={`${cinzel.className} text-[27px] font-bold leading-[36.4px] text-center text-[#1A281F] mb-4 px-2`}
                                     >
                                         {feature.title}
                                     </h3>
                                     <p
-                                        className={`${raleway.className} text-[24px] font-normal leading-[28.18px] text-center text-[#1A281F]`}
+                                        className={`${raleway.className} text-[24px] font-[400] leading-[28.18px] text-center text-[#1A281F] px-2`}
                                     >
                                         {feature.description}
                                     </p>

@@ -13,7 +13,7 @@ const raleway = Raleway({
 
 export default function AboutUs() {
   return (
-    <div className="max-w-7xl mx-auto ">
+    <div className="max-w-7xl mx-auto mt-8">
       <div className="text-center space-y-6 mb-12">
         <h1 className={`${cinzel.className} text-[45px] font-[900] leading-[60.66px] tracking-[0.05em] text-[#1A281F]`}>
           ABOUT US

@@ -114,8 +114,8 @@ export default function HomeSection() {
 
     return (
         <div className="relative h-[610px]">
-            <div className="absolute right-[750px] top-0 h-full">
-                <div className="h-[650px] bg-red-200 p-10 pb-16 border-[3px] border-red-500 w-[600px] mt-12">
+            <div className="absolute right-[750px] top-0 h-full pt-[15vh]">
+                <div className="h-[570px] p-10 w-[600px] shadow-lg drop-shadow-[0_20px_20px_rgba(0,0,0,0.4)]">
                     <div className="max-w-[550px] flex flex-col items-center justify-center ">
                         <h2 className={`text-[45px] font-black leading-[60.66px] text-[#1A281F] pb-4 ${cinzel.className} text-left`}>
                             ABOUT PRINCESS WEDDING
@@ -138,7 +138,7 @@ export default function HomeSection() {
             </div>
 
             <div className="absolute bottom-0 right-0 w-[750px] z-10">
-                <div className="overflow-hidden rounded-lg shadow-lg">
+                <div className="overflow-hidden rounded-lg shadow-lg ">
                     <div
                         className="flex transition-transform duration-500 ease-in-out"
                         style={{ transform: `translateX(-${currentSlide * 100}%)` }}

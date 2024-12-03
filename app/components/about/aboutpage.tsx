@@ -1,42 +1,50 @@
 'use client'
 
 import Image from 'next/image'
+import { Cinzel } from 'next/font/google'
+
+const cinzel = Cinzel({
+    subsets: ['latin'],
+    weight: ['900'],
+    display: 'swap',
+})
 
 export default function AboutPage() {
     return (
-        <div className="relative min-h-screen bg-red-100">
-            {/* Hero Section with Background Image */}
-            <div className="relative h-screen ">
-                {/* Background Image with Next.js Image component */}
-                <div className="absolute ">
-                    {/* <Image
-                        src="/images/about-banner.png"
-                        alt="About Us Banner"
-                        fill
-                        priority
-                        className="object-cover"
-                        quality={100}
-                    /> */}
-                    {/* Dark overlay */}
-                    <div className="absolute inset-0 bg-black/20" />
-                </div>
-                {/* Content Container */}
-                <div className="relative z-10 h-full flex flex-col items-center justify-center text-white text-center px-4">
-                    <div className="bg-[#1A281F4D] p-8 rounded-lg ">
-                        <h1 className="text-[45px] leading-[60.66px] font-[900] text-white text-center mb-4">
-                            About Princess Wedding
+        <div className="relative min-h-screen ">
+            <div className="relative h-screen flex">
+                {/* Left Content - 40% */}
+                <div className="w-[45%] h-full flex items-center justify-center px-8">
+                    <div className=" p-8 rounded-lg w-full">
+                        <h1 className={`${cinzel.className} text-[55px] leading-[74.14px] font-[900] text-[#B17406] text-center mb-4`}>
+                        Let's Plan your dream wedding
                         </h1>
-                        <p className="text-[32px] leading-[43.14px] font-[700] text-white text-center mb-8">
-                            Your Trusted Wedding Planning Partner
+                        <p className={`${cinzel.className} text-[32px] leading-[43.14px] font-[700] text-[#1A281F] text-center mb-8`}>
+                        life is an event
                         </p>
-                        <button
-                            className="bg-[#B17406] hover:bg-[#A66F10] text-white text-[24px] leading-[32.35px] font-[700] px-4 py-2 transition-colors duration-300 rounded-lg"
-                        >
-                            Our Services
-                        </button>
+                        <div className="flex justify-center">
+                            <button className="bg-[#B17406] hover:bg-[#A66F10] text-white text-[24px] leading-[32.35px] font-[700] px-4 py-2 transition-colors duration-300 rounded-lg">
+                                Explore
+                            </button>
+                        </div>
                     </div>
                 </div>
 
+                {/* Right Image - 60% */}
+                <div className="w-[55%] h-full relative">
+                    <div className="absolute inset-0 pb-16 pt-14">
+                        <div className="relative w-full h-[630px]">
+                            <Image
+                                src="/about/Banner_Mask group.png"
+                                alt="About Us Banner"
+                                fill
+                                priority
+                                className="object-cover"
+                                quality={100}
+                            />
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )

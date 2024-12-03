@@ -36,7 +36,7 @@ export default function ContactForm() {
   }
 
   return (
-    <section className="h-[550px] max-w-6xl mx-auto grid lg:grid-cols-2 bg-[#F8F8F8]">
+    <section className="h-[550px] max-w-6xl mx-auto grid lg:grid-cols-2 bg-[#F8F8F8] mb-6">
       {/* Form Section */}
       <div className="flex flex-col p-8 lg:p-16 justify-center h-[550px]">
         <div className="max-w-md">
