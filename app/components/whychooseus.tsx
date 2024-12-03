@@ -54,7 +54,7 @@ export default function WhyChooseUs() {
                     Why Choose Us?
                 </h1>
                 <p className={`${raleway.className} text-[27px] font-semibold leading-[50px] tracking-[0.16em] text-center text-[#1A281F] mb-12`}>
-                    Discover why we're the perfect partner for your special day.
+                    Discover why we&apos;re the perfect partner for your special day.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-y-12 ">
                     {features.map((feature, index) => (
