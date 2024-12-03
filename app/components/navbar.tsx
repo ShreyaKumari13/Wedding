@@ -18,11 +18,12 @@ const Navbar = () => {
 
   const getLinkStyle = (path: string) => {
     const isAboutPage = pathname === '/about';
+    const isCurrentPath = pathname === path;
 
     if (isAboutPage) {
-      return `${raleway.className} text-[20px] font-light leading-[23.48px] text-[#1A281F] hover:font-bold transition-all`;
+      return `${raleway.className} text-[20px] ${isCurrentPath ? 'font-bold' : 'font-light'} leading-[23.48px] text-[#1A281F] hover:font-bold transition-all`;
     }
-    return `${raleway.className} text-[20px] leading-[23.48px] hover:text-white hover:font-[700] transition-all`;
+    return `${raleway.className} text-[20px] leading-[23.48px] ${isCurrentPath ? 'text-white font-[700]' : ''} hover:text-white hover:font-[700] transition-all`;
   };
 
   const toggleMenu = () => {
