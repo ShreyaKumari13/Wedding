@@ -5,12 +5,12 @@ import Image from "next/image"
 import { Cinzel, Raleway } from 'next/font/google'
 
 const cinzel = Cinzel({ 
-  weight: '700',
+  weight: '900',
   subsets: ['latin'],
 })
 
 const raleway = Raleway({ 
-  weight: '400',
+  weight: ['400', '600'],
   subsets: ['latin'],
 })
 
@@ -36,14 +36,14 @@ export default function ContactForm() {
   }
 
   return (
-    <section className="h-[550px] max-w-7xl mx-auto grid lg:grid-cols-2 bg-red-300">
+    <section className="h-[550px] max-w-6xl mx-auto grid lg:grid-cols-2 bg-[#F8F8F8]">
       {/* Form Section */}
       <div className="flex flex-col p-8 lg:p-16 justify-center h-[550px]">
         <div className="max-w-md">
-          <p className={`${raleway.className} text-sm tracking-[0.2em] mb-2`}>
+          <p className={`${raleway.className} text-[27px] font-semibold tracking-[0.2em] mb-2 leading-[31.7px] text-[#1A281F]`}>
             CONTACT
           </p>
-          <h1 className={`${cinzel.className} text-4xl lg:text-5xl mb-12 text-[#1A281F]`}>
+          <h1 className={`${cinzel.className} text-[45px] leading-[60.66px] tracking-[0.05em] mb-12 text-[#1A281F] `}>
             Get in Touch
           </h1>
           
@@ -95,7 +95,7 @@ export default function ContactForm() {
       </div>
 
       {/* Image Section */}
-      <div className="relative hidden lg:block w-[450px] h-[550px]">
+      <div className="relative hidden lg:block w-[450px] h-[550px] justify-self-end">
         <Image
           src="/images/Get In touch.png"
           alt="Happy couple on their wedding day"
