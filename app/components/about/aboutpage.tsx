@@ -9,14 +9,14 @@ export default function AboutPage() {
             <div className="relative h-screen ">
                 {/* Background Image with Next.js Image component */}
                 <div className="absolute ">
-                    <Image
+                    {/* <Image
                         src="/images/about-banner.png"
                         alt="About Us Banner"
                         fill
                         priority
                         className="object-cover"
                         quality={100}
-                    />
+                    /> */}
                     {/* Dark overlay */}
                     <div className="absolute inset-0 bg-black/20" />
                 </div>

@@ -47,7 +47,7 @@ export default function WhatWeOffer() {
           <CardContent className="pt-8 text-center space-y-4">
             <div className="flex justify-center">
               <div className="relative">
-                <ClipboardList className="w-8 h-8 mx-auto text-[#1A281F]" />
+                <ClipboardList className="w-10 h-10 mx-auto text-[#1A281F]" />
                 <div className="absolute w-16 h-[1px] bg-[#1A281F] -left-20 top-1/2" />
                 <div className="absolute w-16 h-[1px] bg-[#1A281F] -right-20 top-1/2" />
               </div>
@@ -66,7 +66,7 @@ export default function WhatWeOffer() {
           <CardContent className="pt-8 text-center space-y-4">
             <div className="flex justify-center">
               <div className="relative">
-                <ImageIcon className="w-8 h-8 mx-auto text-[#1A281F]" />
+                <ImageIcon className="w-10 h-10 mx-auto text-[#1A281F]" />
                 <div className="absolute w-16 h-[1px] bg-[#1A281F] -left-20 top-1/2" />
                 <div className="absolute w-16 h-[1px] bg-[#1A281F] -right-20 top-1/2" />
               </div>
@@ -86,7 +86,7 @@ export default function WhatWeOffer() {
             <div className="flex justify-center">
               <div className="relative">
                 <svg 
-                  className="w-8 h-8 mx-auto text-[#1A281F]"
+                  className="w-10 h-10 mx-auto text-[#1A281F]"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"

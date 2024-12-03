@@ -113,11 +113,10 @@ export default function HomeSection() {
     }, [nextSlide])
 
     return (
-        <div className="relative h-[610px] bg-blue-100">
-            <div className="grid grid-cols-2 items-center gap-0">
-                {/* Text Content */}
-                <div className="h-[650px] bg-red-200 p-10 mx-auto pb-16 border-[3px] border-red-500">
-                    <div className=" max-w-[550px] flex flex-col items-center justify-center ">
+        <div className="relative h-[610px]">
+            <div className="absolute right-[750px] top-0 h-full">
+                <div className="h-[650px] bg-red-200 p-10 pb-16 border-[3px] border-red-500 w-[600px] mt-12">
+                    <div className="max-w-[550px] flex flex-col items-center justify-center ">
                         <h2 className={`text-[45px] font-black leading-[60.66px] text-[#1A281F] pb-4 ${cinzel.className} text-left`}>
                             ABOUT PRINCESS WEDDING
                         </h2>

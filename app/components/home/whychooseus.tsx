@@ -47,7 +47,7 @@ const features = [
 
 export default function WhyChooseUs() {
     return (
-        <section className="py-16">
+        <section className="py-16 pt-[200px]">
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h1 className={`${cinzel.className} text-[45px] leading-[60.66px] tracking-[0.05em] text-center mb-6 text-[#1A281F]`}>
