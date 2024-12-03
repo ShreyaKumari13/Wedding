@@ -17,7 +17,7 @@ export default function AboutPage() {
                 <div className="w-[45%] h-full flex items-center justify-center px-8">
                     <div className=" p-8 rounded-lg w-full">
                         <h1 className={`${cinzel.className} text-[55px] leading-[74.14px] font-[900] text-[#B17406] text-center mb-4`}>
-                        Let's Plan your dream wedding
+                        Let&apos;s Plan your dream wedding
                         </h1>
                         <p className={`${cinzel.className} text-[32px] leading-[43.14px] font-[700] text-[#1A281F] text-center mb-8`}>
                         life is an event

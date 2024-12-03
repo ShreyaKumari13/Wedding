@@ -26,7 +26,7 @@ export default function ContactSection() {
       </div>
       <div className="max-w-7xl mx-auto px-4 mb-8">
         <h2 className={`${cinzel.className} text-[27px] font-[700] leading-[36.4px] text-center text-[#1A281F]`}>
-          "YOU WILL NEVER KNOW THE VALUE OF A MOMENT UNTIL IT BECOMES A MEMORY."
+          &quot;YOU WILL NEVER KNOW THE VALUE OF A MOMENT UNTIL IT BECOMES A MEMORY.&quot;
         </h2>
       </div>
       <div className="relative w-full h-[590px]">
@@ -65,7 +65,7 @@ export default function ContactSection() {
   )
 }
 
-function ContactItem({ icon: Icon, title, children }: { icon: any; title: string; children: React.ReactNode }) {
+function ContactItem({ icon: Icon, title, children }: { icon: React.ComponentType<{className?: string}>; title: string; children: React.ReactNode }) {
   return (
     <div className="flex flex-col items-center text-center space-y-3">
       <Icon className="w-14 h-14 text-[#B8860B]" />

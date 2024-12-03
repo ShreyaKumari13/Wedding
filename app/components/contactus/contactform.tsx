@@ -47,7 +47,7 @@ export default function ContactForm() {
               READY TO GET IN TOUCH?
             </h2>
             <p className={`${raleway.className} text-[24px] font-[400] leading-[36px] text-left text-[#787878]`}>
-              At Princess Wedding, we're here to assist you every step of the way!
+              At Princess Wedding, we&apos;re here to assist you every step of the way!
             </p>
           </div>
         </div>
