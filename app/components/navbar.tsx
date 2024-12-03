@@ -5,14 +5,26 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { Raleway } from 'next/font/google';
 import { Search } from 'lucide-react';
+import { usePathname } from 'next/navigation';
 
 const raleway = Raleway({
-  weight: ['300', '700'],
   subsets: ['latin'],
+  weight: ['300', '700'],
 });
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const getLinkStyle = (path: string) => {
+    const isActive = pathname === path;
+    const isAboutPage = pathname === '/about';
+
+    if (isAboutPage) {
+      return `${raleway.className} text-[20px] font-light leading-[23.48px] text-[#1A281F] hover:font-bold transition-all`;
+    }
+    return `${raleway.className} text-[20px] leading-[23.48px] hover:text-white hover:font-[700] transition-all`;
+  };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -50,7 +62,7 @@ const Navbar = () => {
           <li>
             <Link 
               href="/" 
-              className={`${raleway.className} text-[20px] leading-[23.48px] hover:text-white hover:font-[700] transition-all`}
+              className={getLinkStyle('/')}
             >
               Home
             </Link>
@@ -58,7 +70,7 @@ const Navbar = () => {
           <li>
             <Link 
               href="/about" 
-              className={`${raleway.className} text-[20px] leading-[23.48px] hover:text-white hover:font-[700] transition-all`}
+              className={getLinkStyle('/about')}
             >
               About Us
             </Link>
@@ -66,7 +78,7 @@ const Navbar = () => {
           <li>
             <Link 
               href="/services" 
-              className={`${raleway.className} text-[20px] leading-[23.48px] hover:text-white hover:font-[700] transition-all`}
+              className={getLinkStyle('/services')}
             >
               Services
             </Link>
@@ -74,7 +86,7 @@ const Navbar = () => {
           <li>
             <Link 
               href="/catalogue" 
-              className={`${raleway.className} text-[20px] leading-[23.48px] hover:text-white hover:font-[700] transition-all`}
+              className={getLinkStyle('/catalogue')}
             >
               Catalogue
             </Link>
@@ -82,18 +94,20 @@ const Navbar = () => {
           <li>
             <Link 
               href="/contact" 
-              className={`${raleway.className} text-[20px] leading-[23.48px] hover:text-white hover:font-[700] transition-all`}
+              className={getLinkStyle('/contact')}
             >
               Contact Us
             </Link>
           </li>
           <li>
-            <button
-              className="text-[#F5F5F5] hover:text-white transition-colors"
-              aria-label="Search"
-            >
-              <Search className="w-5 h-5" />
-            </button>
+            <div className="flex items-center gap-4">
+              <button
+                className={`${pathname === '/about' ? 'text-[#1A281F]' : 'text-[#F5F5F5] hover:text-white'} transition-colors`}
+                aria-label="Search"
+              >
+                <Search className="w-5 h-5" />
+              </button>
+            </div>
           </li>
         </ul>
       </div>

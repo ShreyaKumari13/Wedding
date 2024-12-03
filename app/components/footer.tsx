@@ -10,7 +10,7 @@ const raleway = Raleway({
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1a2721] text-white mt-6 py-4">
+    <footer className="bg-[#1a2721] text-white mt-6 py-4 px-12">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between">
           {/* Logo */}
@@ -25,7 +25,7 @@ export default function Footer() {
           </div>
 
           {/* Navigation Links */}
-          <nav className="flex flex-wrap justify-center gap-4 md:gap-8 mb-4 md:mb-0">
+          <nav className="flex flex-wrap justify-center  md:gap-12 mb-4 md:mb-0">
             <Link 
               href="/about" 
               className={`${raleway.className} text-[16px] leading-[24px] text-left text-[#F5F5F5] hover:text-[#E4A853]`}
