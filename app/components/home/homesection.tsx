@@ -21,7 +21,7 @@ const raleway = Raleway({
 
 const images = [
     {
-        src: "/images/about us image 1.png",
+        src: "/images/about us image 1.jpg",
         alt: "Wedding rings",
         width: "259.9px",
         height: "319.28px"
@@ -63,7 +63,7 @@ const images = [
         }
     },
     {
-        src: "/images/about us image 3.png",
+        src: "/images/about us image 3.jpg",
         alt: "Table setting",
         width: "250.13px",
         height: "291.15px",
