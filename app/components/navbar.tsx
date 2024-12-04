@@ -17,12 +17,13 @@ const Navbar = () => {
   const pathname = usePathname();
 
   const getLinkStyle = (path: string) => {
-    const isSpecialPage = pathname === '/about' || pathname === '/catalogue';
-    const isCurrentPath = pathname === path;
+    const isSpecialPage = pathname.includes('/catalogue') || pathname === '/about';
+    const isCurrentPath = path === '/catalogue' ? pathname.includes('/catalogue') : pathname === path;
 
     if (isSpecialPage) {
       return `${raleway.className} text-[20px] ${isCurrentPath ? 'font-bold' : 'font-light'} leading-[23.48px] text-[#1A281F] hover:font-bold transition-all`;
     }
+
     return `${raleway.className} text-[20px] leading-[23.48px] ${isCurrentPath ? 'text-white font-[700]' : ''} hover:text-white hover:font-[700] transition-all`;
   };
 

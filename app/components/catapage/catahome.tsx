@@ -1,44 +1,150 @@
 'use client'
 
-import React from 'react';
-import Image from 'next/image';
-import { Cinzel } from 'next/font/google';
+import Image from "next/image"
+import { Cinzel } from 'next/font/google'
+import React from 'react'
 
 const cinzel = Cinzel({
-    subsets: ['latin'],
-    weight: ['900'],
-    display: 'swap',
+  subsets: ['latin'],
+  weight: ['900'],
 })
+
+const ConnectingThreads = () => {
+  return (
+    <div className="absolute inset-0 w-full h-full">
+      {/* Left connecting thread - Golden yellow */}
+      <div className="absolute left-[25%] top-1/2 h-[2px] w-[25%] -translate-y-1/2 rotate-12 bg-gradient-to-r from-amber-400/80 to-yellow-300/60" />
+
+      {/* Right connecting thread - Silver white */}
+      <div className="absolute right-[25%] top-1/2 h-[2px] w-[25%] -translate-y-1/2 -rotate-12 bg-gradient-to-r from-gray-300/60 to-white/80" />
+    </div>
+  )
+}
+
+const GlitterEffects = () => {
+  return (
+    <div className="absolute bottom-0 left-0 right-0 h-[60%] w-full pointer-events-none overflow-hidden">
+      {[...Array(500)].map((_, i) => (
+        <div
+          key={`glitter-${i}`}
+          className="w-[4.96px] h-[3.44px] bg-[#F2EED8]/80 rounded-full animate-twinkle absolute"
+          style={{
+            animationDelay: `${Math.random() * 2}s`,
+            left: `${Math.random() * 100}%`,
+            top: `${Math.random() * 100}%`,
+          }}
+        />
+      ))}
+    </div>
+  )
+}
 
 const CataHome = () => {
   return (
-    <div className="relative min-h-screen">
-      <div className="relative h-screen flex">
-        {/* Left Content - 40% */}
-        <div className="w-[45%] h-full flex items-center justify-center px-8">
-          <div className="p-8 rounded-lg w-full">
-            <h1 className={`${cinzel.className} text-[55px] leading-[74.14px] font-[900] text-[#B17406] text-center mb-4`}>
-              Our Wedding Collection
-            </h1>
-            <p className="text-lg text-gray-600 text-center mt-4">
-              Discover our beautiful collection of wedding dresses, decorations, and accessories
-            </p>
+    <>
+      <style jsx global>{`
+        @keyframes twinkle {
+          0%, 100% { opacity: 0.4; }
+          50% { opacity: 1; }
+        }
+        .animate-twinkle {
+          animation: twinkle 2s ease-in-out infinite;
+        }
+      `}</style>
+      <div className="relative min-h-screen overflow-hidden">
+        {/* Background div that covers bottom 60% */}
+        <div className="absolute bottom-0 left-0 right-0 h-[60%] bg-[#19381F] z-0" />
+        
+        {/* Glitter Effects */}
+        <div className="absolute bottom-0 left-0 right-0 h-[60%] w-screen z-[1]">
+          <GlitterEffects />
+        </div>
+        
+        <div className="relative z-10 container mx-auto max-w-6xl px-4 py-16 flex items-center justify-between min-h-screen">
+          {/* Left image set */}
+          <div className="relative h-[300px] w-80 md:w-96 -translate-y-28">
+            {/* Main image */}
+            <Image
+              src="/imgcata/3.png"
+              alt="Wedding Catering Left"
+              fill
+              className="object-contain"
+              priority
+            />
+            
+            {/* Overlay image */}
+            <div className="absolute top-11 -translate-y-1/2 inset-x-0 h-1/2 flex items-start justify-end">
+              <div className="relative w-80 md:w-96 h-[365px]">
+                <Image
+                  src="/imgcata/1.1.png"
+                  alt="Small Wedding Image Left"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Center image set */}
+          <div className="relative h-[450px] w-80 md:w-96">
+            {/* Main image */}
+            <Image
+              src="/imgcata/1.png"
+              alt="Wedding Catering Center"
+              fill
+              className="object-contain"
+              priority
+            />
+            
+            {/* Overlay image */}
+            <div className="absolute inset-0 flex items-center justify-end pl-4">
+              <div className="relative w-80 md:w-96 h-[570px]">
+                <Image
+                  src="/imgcata/1.1.png"
+                  alt="Small Wedding Image Center"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Connecting Threads */}
+          <div className="absolute inset-0 z-[2]">
+            <ConnectingThreads />
+          </div>
+
+          {/* Right image set */}
+          <div className="relative h-[300px] w-80 md:w-96 -translate-y-28">
+            {/* Main image */}
+            <Image
+              src="/imgcata/2.png"
+              alt="Wedding Catering Right"
+              fill
+              className="object-contain"
+              priority
+            />
+            
+            {/* Overlay image */}
+            <div className="absolute top-11 -translate-y-1/2 inset-x-0 h-1/2 flex items-start justify-end">
+              <div className="relative w-80 md:w-96 h-[365px]">
+                <Image
+                  src="/imgcata/1.1.png"
+                  alt="Small Wedding Image Right"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            </div>
           </div>
         </div>
-
-        {/* Right Content - 60% */}
-        <div className="w-[55%] h-full relative">
-          <Image
-            src="/imgservice/quality service 1.png"
-            alt="Wedding Collection"
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
       </div>
-    </div>
-  );
-};
+    </>
+  )
+}
 
-export default CataHome;
+export default CataHome
+
