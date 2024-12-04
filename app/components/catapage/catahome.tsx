@@ -150,7 +150,7 @@ const CataHome = () => {
           </div>
 
           {/* Heading */}
-          <div className="absolute bottom-[36px] left-1/2 -translate-x-1/2 6 flex flex-col items-center">
+          <div className="absolute bottom-[24px] left-1/2 -translate-x-1/2 flex flex-col items-center">
             <h1 className={`${cinzel.className} text-white text-[45px] font-black leading-[60.66px] whitespace-nowrap`}>
               Explore Our Collection
             </h1>
