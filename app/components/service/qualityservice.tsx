@@ -20,7 +20,7 @@ export default function QualityService() {
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-8 md:grid-cols-2">
           {/* Left Column with Table Setting Image */}
-          <div className="relative h-[300px] md:h-[550px]">
+          <div className="relative h-[300px] md:h-[570px]">
             <Image
               src="/imgservice/quality service 1.png"
               alt="Elegant table setting with wine glasses and floral decorations"
@@ -36,7 +36,7 @@ export default function QualityService() {
               QUALITY SERVICE
             </h1>
             
-            <div className="bg-gray-50 p-6 md:p-8 space-y-6">
+            <div className="bg-gray-50 p-6 md:p-3 space-y-6">
               <p className={`${raleway.className} text-[27px] font-normal leading-[31.7px] tracking-[0.05em] text-left text-[#000000]`}>
                 Reach out to us for exceptional wedding services crafted to match your vision. From planning to design, we ensure every moment is truly unforgettable.
               </p>
@@ -62,15 +62,7 @@ export default function QualityService() {
         </div>
       </div>
       
-      {/* Decorative Chandelier Element */}
-      <div className="absolute top-0 right-0 w-32 h-32 opacity-20">
-        <Image
-          src="/placeholder.svg?height=200&width=200"
-          alt="Decorative chandelier"
-          fill
-          className="object-contain"
-        />
-      </div>
+      
     </div>
   )
 }
