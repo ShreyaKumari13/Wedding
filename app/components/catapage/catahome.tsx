@@ -23,18 +23,26 @@ const ConnectingThreads = () => {
 
 const GlitterEffects = () => {
   return (
-    <div className="absolute bottom-0 left-0 right-0 h-[60%] w-full pointer-events-none overflow-hidden">
-      {[...Array(500)].map((_, i) => (
-        <div
-          key={`glitter-${i}`}
-          className="w-[4.96px] h-[3.44px] bg-[#F2EED8]/80 rounded-full animate-twinkle absolute"
-          style={{
-            animationDelay: `${Math.random() * 2}s`,
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
-          }}
-        />
-      ))}
+    <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden">
+      {[...Array(1000)].map((_, i) => {
+        const size = Math.random() * 6 + 1; // Random size between 1-7px
+        const opacity = Math.random() * 0.7 + 0.3; // Random opacity between 0.3-1
+        return (
+          <div
+            key={`glitter-${i}`}
+            className="absolute bg-[#F2EED8] rounded-full animate-twinkle"
+            style={{
+              width: `${size}px`,
+              height: `${size}px`,
+              opacity: opacity,
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${i * 0.1}s`,
+              transform: `rotate(${Math.random() * 360}deg) translate(${Math.random() * 30}px, ${Math.random() * 30}px)`,
+            }}
+          />
+        );
+      })}
     </div>
   )
 }
@@ -51,15 +59,15 @@ const CataHome = () => {
           animation: twinkle 2s ease-in-out infinite;
         }
       `}</style>
-      <div className="relative min-h-screen overflow-hidden">
+      <div className="relative min-h-screen">
         {/* Background div that covers bottom 60% */}
         <div className="absolute bottom-0 left-0 right-0 h-[60%] bg-[#19381F] z-0" />
         
         {/* Glitter Effects */}
-        <div className="absolute bottom-0 left-0 right-0 h-[60%] w-screen z-[1]">
+        <div className="absolute bottom-0 left-0 right-0 h-[60%] z-0">
           <GlitterEffects />
         </div>
-        
+
         <div className="relative z-10 container mx-auto max-w-6xl px-4 py-16 flex items-center justify-between min-h-screen">
           {/* Left image set */}
           <div className="relative h-[300px] w-80 md:w-96 -translate-y-28">
@@ -111,8 +119,18 @@ const CataHome = () => {
             </div>
           </div>
 
+          {/* Heading */}
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 6 flex flex-col items-center">
+            <h1 className={`${cinzel.className} text-white text-[45px] font-black leading-[60.66px] whitespace-nowrap`}>
+              Explore Our Collection
+            </h1>
+            <h2 className={`${cinzel.className} text-white text-[27px] font-bold leading-[36.4px] whitespace-nowrap mt-2`}>
+              Shop Online for Your Wedding Needs
+            </h2>
+          </div>
+
           {/* Connecting Threads */}
-          <div className="absolute inset-0 z-[2]">
+          <div className="absolute inset-0 -z-10">
             <ConnectingThreads />
           </div>
 
@@ -147,4 +165,3 @@ const CataHome = () => {
 }
 
 export default CataHome
-

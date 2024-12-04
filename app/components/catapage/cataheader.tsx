@@ -63,8 +63,8 @@ export function CataHeader({ activeSection }: CataHeaderProps) {
                     className={cn(
                       `${cinzel.className} inline-block whitespace-nowrap rounded-md px-4 py-2 text-[21px] font-[900] leading-[25.2px] text-left transition-colors`,
                       isActive
-                        ? "bg-[#B17406] text-[#FFFFFF]"
-                        : "bg-white text-[#1A281F] hover:bg-[#B17406] hover:text-[#FFFFFF]"
+                        ? "bg-[#B17406] text-[#FFFFFF] hover:bg-[#D9A441] hover:text-[#FFFFFF]"
+                        : "bg-white text-[#1A281F] hover:bg-[#F0E6D2] hover:text-[#1A281F]"
                     )}
                   >
                     {item.title}
@@ -181,3 +181,4 @@ export function CataHeader({ activeSection }: CataHeaderProps) {
     </header>
   )
 }
+
