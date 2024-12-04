@@ -22,7 +22,7 @@ export default function QualityService() {
           {/* Left Column with Table Setting Image */}
           <div className="relative h-[300px] md:h-[570px]">
             <Image
-              src="/imgservice/quality service 1.png"
+              src="/imgservice/quality service 1.jpg"
               alt="Elegant table setting with wine glasses and floral decorations"
               fill
               className="object-cover"
@@ -52,7 +52,7 @@ export default function QualityService() {
             {/* Wedding Rings Image */}
             <div className="relative h-[300px] mt-8">
               <Image
-                src="/imgservice/quality service 2.png"
+                src="/imgservice/quality service 2.jpg"
                 alt="Gold wedding rings on lace"
                 fill
                 className="object-cover"

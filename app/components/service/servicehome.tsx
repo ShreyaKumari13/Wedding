@@ -14,7 +14,7 @@ export default function ServiceHome() {
         <div className="relative min-h-screen">
             <div className="relative h-screen">
                 <Image
-                    src="/imgservice/Banner.png"
+                    src="/imgservice/Banner.jpg"
                     alt="Our Services Banner"
                     fill
                     priority

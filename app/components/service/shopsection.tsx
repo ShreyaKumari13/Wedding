@@ -20,7 +20,7 @@ export default function ShopSection() {
         {/* Main Image */}
         <div className="absolute inset-0">
           <Image
-            src="/imgservice/5.png"
+            src="/imgservice/5.jpg"
             alt="Wedding essentials including silver bridal shoes and rose bouquet"
             fill
             className="object-cover"

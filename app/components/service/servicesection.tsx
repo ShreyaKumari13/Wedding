@@ -23,7 +23,7 @@ export default function ServicesSection() {
         <div className="col-span-3 row-span-5 relative flex flex-col">
           <div className="relative flex-1">
             <Image
-              src="/imgservice/1.png"
+              src="/imgservice/1.jpg"
               alt="Elegant white-themed outdoor venue with floral arch"
               fill
               className="object-cover"
@@ -39,7 +39,7 @@ export default function ServicesSection() {
         <div className="col-start-4 col-span-5 row-span-3 relative flex flex-col">
           <div className="relative flex-1">
             <Image
-              src="/imgservice/2.png"
+              src="/imgservice/2.jpg"
               alt="Elegant multi-tiered dessert and catering display"
               fill
               className="object-cover"
@@ -55,7 +55,7 @@ export default function ServicesSection() {
         <div className="col-start-1 col-span-4 row-start-6 row-span-3 relative flex flex-col">
           <div className="relative flex-1">
             <Image
-              src="/imgservice/3.png"
+              src="/imgservice/3.jpg"
               alt="Luxurious hanging floral installation with crystal decorations"
               fill
               className="object-cover"
@@ -71,7 +71,7 @@ export default function ServicesSection() {
         <div className="col-start-5 col-span-4 row-start-4 row-span-5 relative flex flex-col">
           <div className="relative flex-1">
             <Image
-              src="/imgservice/4.png"
+              src="/imgservice/4.jpg"
               alt="Romantic couple photo at historic venue"
               fill
               className="object-cover"

@@ -14,7 +14,7 @@ export default function ContactHome() {
         <div className="relative min-h-screen">
             <div className="relative h-screen">
                 <Image
-                    src="/imgcontact/Banner.png"
+                    src="/imgcontact/Banner.jpg"
                     alt="Contact Us Banner"
                     fill
                     priority

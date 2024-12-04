@@ -31,7 +31,7 @@ export default function ContactSection() {
       </div>
       <div className="relative w-full h-[590px]">
         <Image
-          src="/imgcontact/Enquiry now.png"
+          src="/imgcontact/Enquiry.jpg"
           alt="Wedding table decoration with white draping and floral arrangements"
           fill
           className="object-cover"
