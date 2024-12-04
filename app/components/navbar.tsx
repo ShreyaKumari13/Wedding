@@ -103,7 +103,7 @@ const Navbar = () => {
           <li>
             <div className="flex items-center gap-4">
               <button
-                className={`${pathname === '/about' ? 'text-[#1A281F]' : 'text-[#F5F5F5] hover:text-white'} transition-colors`}
+                className={`${pathname.includes('/catalogue') ? 'text-[#1A281F] hover:text-[#1A281F]' : (pathname === '/about' ? 'text-[#1A281F]' : 'text-[#F5F5F5] hover:text-white')} transition-colors`}
                 aria-label="Search"
               >
                 <Search className="w-5 h-5" />

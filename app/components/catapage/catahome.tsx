@@ -108,10 +108,6 @@ const CataHome = () => {
               fill
               className="object-contain"
               priority
-              placeholder="blur"
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
-              loading="eager"
-              fetchPriority="high"
             />
             
             {/* Overlay image */}
@@ -123,10 +119,6 @@ const CataHome = () => {
                   fill
                   className="object-contain"
                   priority
-                  placeholder="blur"
-                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
-                  loading="eager"
-                  fetchPriority="high"
                 />
               </div>
             </div>
@@ -141,10 +133,6 @@ const CataHome = () => {
               fill
               className="object-contain"
               priority
-              placeholder="blur"
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
-              loading="eager"
-              fetchPriority="high"
             />
             
             {/* Overlay image */}
@@ -156,10 +144,6 @@ const CataHome = () => {
                   fill
                   className="object-contain"
                   priority
-                  placeholder="blur"
-                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
-                  loading="eager"
-                  fetchPriority="high"
                 />
               </div>
             </div>
@@ -189,10 +173,6 @@ const CataHome = () => {
               fill
               className="object-contain"
               priority
-              placeholder="blur"
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
-              loading="eager"
-              fetchPriority="high"
             />
             
             {/* Overlay image */}
@@ -204,10 +184,6 @@ const CataHome = () => {
                   fill
                   className="object-contain"
                   priority
-                  placeholder="blur"
-                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
-                  loading="eager"
-                  fetchPriority="high"
                 />
               </div>
             </div>

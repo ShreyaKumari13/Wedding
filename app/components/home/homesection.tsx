@@ -5,6 +5,7 @@ import { Cinzel } from 'next/font/google'
 import { Raleway } from 'next/font/google'
 import { useState, useEffect, useCallback } from 'react'
 import { ArrowRight } from 'lucide-react'
+import { useRouter } from 'next/navigation';
 
 const cinzel = Cinzel({
     subsets: ['latin'],
@@ -100,6 +101,8 @@ const images = [
 ]
 
 export default function HomeSection() {
+    const router = useRouter();
+
     const [currentSlide, setCurrentSlide] = useState(0)
     const totalSlides = Math.ceil(images.length / 3)
 
@@ -111,6 +114,10 @@ export default function HomeSection() {
         const timer = setInterval(nextSlide, 3000) // Auto-advance every 5 seconds
         return () => clearInterval(timer)
     }, [nextSlide])
+
+    const handleSeeMoreClick = () => {
+        router.push('/about');
+    };
 
     return (
         <div className="relative h-[610px]">
@@ -125,6 +132,7 @@ export default function HomeSection() {
                         </p>
                         <div className="flex justify-start w-full">
                             <button
+                                onClick={handleSeeMoreClick}
                                 className={`group flex items-center justify-center bg-[#1E1E1E] text-white w-[180px] h-[45px] rounded-tl-[20px] rounded-br-[20px] ${cinzel.className} border-2 border-[#B17406CC] pr-2`}
                             >
                                 <span className="font-black text-[18px] leading-none flex-grow whitespace-nowrap text-center">SEE MORE</span>

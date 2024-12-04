@@ -42,7 +42,7 @@ export default function QualityService() {
               </p>
               
               <Link 
-                href="#enquire"
+                href="/contact"
                 className={`${cinzel.className} inline-block bg-[#B17406] text-[24px] font-black leading-[32.35px] text-left text-white px-3 py-2 uppercase tracking-wider hover:bg-[#986C0E] transition-colors rounded-md`}
               >
                 Enquire now
