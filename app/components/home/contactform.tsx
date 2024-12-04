@@ -97,7 +97,7 @@ export default function ContactForm() {
       {/* Image Section */}
       <div className="relative hidden lg:block w-[450px] h-[550px] justify-self-end">
         <Image
-          src="/images/Get In touch.png"
+          src="/images/Get In touch.jpg"
           alt="Happy couple on their wedding day"
           fill
           className="object-cover"

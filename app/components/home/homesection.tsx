@@ -27,7 +27,7 @@ const images = [
         height: "319.28px"
     },
     {
-        src: "/images/about us image 2.png",
+        src: "/images/about us image 2.jpg",
         alt: "Wedding party",
         width: "252.21px",
         height: "291.15px",

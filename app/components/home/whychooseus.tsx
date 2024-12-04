@@ -17,7 +17,7 @@ const raleway = Raleway({
 
 const features = [
     {
-        image: "/images/why choose us 1.png",
+        image: "/images/why choose us 1.jpg",
         imageAlt: "Bride in wedding dress holding bouquet"
     },
     {
@@ -26,7 +26,7 @@ const features = [
         description: "Tailored experiences to suit your unique vision.",
     },
     {
-        image: "/images/why choose us 3.png",
+        image: "/images/why choose us 2.jpg",
         imageAlt: "Wedding table decorations with flowers"
     },
     {
@@ -35,7 +35,7 @@ const features = [
         description: "Our team is dedicated to making your day unforgettable.",
     },
     {
-        image: "/images/why choose us 2.png",
+        image: "/images/why choose us 3.jpg",
         imageAlt: "Wedding planner discussing with couple"
     },
     {
