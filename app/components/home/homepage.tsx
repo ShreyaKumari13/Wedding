@@ -2,14 +2,22 @@
 
 import Image from 'next/image'
 import { Cinzel } from 'next/font/google'
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 const cinzel = Cinzel({
     subsets: ['latin'],
-    weight: ['700'],
+    weight: ['700', '900'],
     display: 'swap',
 })
 
 export default function Homepage() {
+    const router = useRouter();
+
+    const handleExploreServices = () => {
+        router.push('/services');
+    };
+
     return (
         <div className="relative min-h-screen">
             {/* Hero Section with Background Image */}
@@ -37,6 +45,7 @@ export default function Homepage() {
                             Creating Unforgettable Moments
                         </p>
                         <button
+                            onClick={handleExploreServices}
                             className="bg-[#B17406] hover:bg-[#A66F10] text-white text-[24px] leading-[32.35px] font-[700] px-4 py-2 transition-colors duration-300 rounded-lg"
                         >
                             Explore Our Services

@@ -3,6 +3,7 @@
 import Image from "next/image"
 import { Cinzel } from 'next/font/google'
 import React from 'react'
+import Head from 'next/head'
 
 const cinzel = Cinzel({
   subsets: ['latin'],
@@ -50,6 +51,34 @@ const GlitterEffects = () => {
 const CataHome = () => {
   return (
     <>
+      <Head>
+        {/* Preload critical images */}
+        <link 
+          rel="preload" 
+          href="/imgcata/3.png" 
+          as="image" 
+          type="image/png" 
+        />
+        <link 
+          rel="preload" 
+          href="/imgcata/1.1.png" 
+          as="image" 
+          type="image/png" 
+        />
+        <link 
+          rel="preload" 
+          href="/imgcata/1.png" 
+          as="image" 
+          type="image/png" 
+        />
+        <link 
+          rel="preload" 
+          href="/imgcata/2.png" 
+          as="image" 
+          type="image/png" 
+        />
+      </Head>
+      
       <style jsx global>{`
         @keyframes twinkle {
           0%, 100% { opacity: 0.4; }
@@ -59,6 +88,7 @@ const CataHome = () => {
           animation: twinkle 2s ease-in-out infinite;
         }
       `}</style>
+      
       <div className="relative min-h-screen">
         {/* Background div that covers bottom 60% */}
         <div className="absolute bottom-0 left-0 right-0 h-[60%] bg-[#19381F] z-0" />
@@ -78,6 +108,10 @@ const CataHome = () => {
               fill
               className="object-contain"
               priority
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
+              loading="eager"
+              fetchPriority="high"
             />
             
             {/* Overlay image */}
@@ -89,6 +123,10 @@ const CataHome = () => {
                   fill
                   className="object-contain"
                   priority
+                  placeholder="blur"
+                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
+                  loading="eager"
+                  fetchPriority="high"
                 />
               </div>
             </div>
@@ -103,6 +141,10 @@ const CataHome = () => {
               fill
               className="object-contain"
               priority
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
+              loading="eager"
+              fetchPriority="high"
             />
             
             {/* Overlay image */}
@@ -114,13 +156,17 @@ const CataHome = () => {
                   fill
                   className="object-contain"
                   priority
+                  placeholder="blur"
+                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
+                  loading="eager"
+                  fetchPriority="high"
                 />
               </div>
             </div>
           </div>
 
           {/* Heading */}
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 6 flex flex-col items-center">
+          <div className="absolute bottom-[36px] left-1/2 -translate-x-1/2 6 flex flex-col items-center">
             <h1 className={`${cinzel.className} text-white text-[45px] font-black leading-[60.66px] whitespace-nowrap`}>
               Explore Our Collection
             </h1>
@@ -143,6 +189,10 @@ const CataHome = () => {
               fill
               className="object-contain"
               priority
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
+              loading="eager"
+              fetchPriority="high"
             />
             
             {/* Overlay image */}
@@ -154,6 +204,10 @@ const CataHome = () => {
                   fill
                   className="object-contain"
                   priority
+                  placeholder="blur"
+                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
+                  loading="eager"
+                  fetchPriority="high"
                 />
               </div>
             </div>
