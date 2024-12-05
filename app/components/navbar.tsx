@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 import { Raleway } from 'next/font/google';
-import { Search } from 'lucide-react';
+import { Search, User, Heart, ShoppingCart } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 
 const raleway = Raleway({
@@ -59,49 +59,69 @@ const Navbar = () => {
         </button>
 
         {/* Desktop Menu Links */}
-        <ul className={`hidden md:flex gap-10 text-[#F5F5F5] items-center ${isMenuOpen ? 'block' : 'hidden'}`}>
-          <li>
-            <Link 
-              href="/" 
-              className={getLinkStyle('/')}
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link 
-              href="/about" 
-              className={getLinkStyle('/about')}
-            >
-              About Us
-            </Link>
-          </li>
-          <li>
-            <Link 
-              href="/services" 
-              className={getLinkStyle('/services')}
-            >
-              Services
-            </Link>
-          </li>
-          <li>
-            <Link 
-              href="/catalogue" 
-              className={getLinkStyle('/catalogue')}
-            >
-              Catalogue
-            </Link>
-          </li>
-          <li>
-            <Link 
-              href="/contact" 
-              className={getLinkStyle('/contact')}
-            >
-              Contact Us
-            </Link>
-          </li>
-          <li>
-            <div className="flex items-center gap-4">
+        <div className="flex items-center flex-1 items-center">
+          <div className="flex items-center justify-between w-full">
+            <ul className={`hidden md:flex gap-10 text-[#F5F5F5] items-center mx-auto ${isMenuOpen ? 'block' : 'hidden'}`}>
+              <li>
+                <Link 
+                  href="/" 
+                  className={getLinkStyle('/')}
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/about" 
+                  className={getLinkStyle('/about')}
+                >
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/services" 
+                  className={getLinkStyle('/services')}
+                >
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/catalogue" 
+                  className={getLinkStyle('/catalogue')}
+                >
+                  Catalogue
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/contact" 
+                  className={getLinkStyle('/contact')}
+                >
+                  Contact Us
+                </Link>
+              </li>
+            </ul>
+            <div className="flex items-center gap-8">
+              <button
+                  className={`${pathname.includes('/catalogue') ? 'text-[#1A281F] hover:text-[#1A281F]' : (pathname === '/about' ? 'text-[#1A281F]' : 'text-[#F5F5F5] hover:text-white')} transition-colors`}
+                  aria-label="User profile"
+                >
+                  <User className="w-5 h-5" />
+              </button>
+              <button
+                className={`${pathname.includes('/catalogue') ? 'text-[#1A281F] hover:text-[#1A281F]' : (pathname === '/about' ? 'text-[#1A281F]' : 'text-[#F5F5F5] hover:text-white')} transition-colors`}
+                aria-label="Favorites"
+              >
+                <Heart className="w-5 h-5" />
+              </button>
+              <button
+                className={`${pathname.includes('/catalogue') ? 'text-[#1A281F] hover:text-[#1A281F]' : (pathname === '/about' ? 'text-[#1A281F]' : 'text-[#F5F5F5] hover:text-white')} transition-colors`}
+                aria-label="Shopping cart"
+              >
+                <ShoppingCart className="w-5 h-5" />
+              </button>
               <button
                 className={`${pathname.includes('/catalogue') ? 'text-[#1A281F] hover:text-[#1A281F]' : (pathname === '/about' ? 'text-[#1A281F]' : 'text-[#F5F5F5] hover:text-white')} transition-colors`}
                 aria-label="Search"
@@ -109,8 +129,8 @@ const Navbar = () => {
                 <Search className="w-5 h-5" />
               </button>
             </div>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </nav>
   );
