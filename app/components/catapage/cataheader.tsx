@@ -86,11 +86,11 @@ const getImagesForSection = (section: string) => {
       '/imgcata/makeup/4.jpg',
       '/imgcata/makeup/5.jpg',
       '/imgcata/makeup/6.jpg',
-      '/imgcata/makeup/7.jpeg',
+      '/imgcata/makeup/7.jpg',
       '/imgcata/makeup/8.jpg',
     ],
     ceremony: [
-      '/imgcata/betrothal/1.jpg',
+      '/imgcata/betrothal/1.png',
       '/imgcata/betrothal/2.jpg',
       '/imgcata/betrothal/3.jpg',
       '/imgcata/betrothal/4.jpg',
