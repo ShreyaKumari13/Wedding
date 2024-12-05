@@ -90,14 +90,14 @@ const getImagesForSection = (section: string) => {
       '/imgcata/makeup/8.jpg',
     ],
     ceremony: [
-      '/imgcata/dresses/1.jpg',
-      '/imgcata/dresses/2.jpg',
-      '/imgcata/dresses/3.jpg',
-      '/imgcata/dresses/4.jpg',
-      '/imgcata/dresses/5.jpg',
-      '/imgcata/dresses/6.jpg',
-      '/imgcata/dresses/7.jpg',
-      '/imgcata/dresses/8.jpg',
+      '/imgcata/betrothal/1.jpg',
+      '/imgcata/betrothal/2.jpg',
+      '/imgcata/betrothal/3.jpg',
+      '/imgcata/betrothal/4.jpg',
+      '/imgcata/betrothal/5.jpg',
+      '/imgcata/betrothal/6.jpg',
+      '/imgcata/betrothal/7.jpg',
+      '/imgcata/betrothal/8.jpg',
     ],
   };
 
