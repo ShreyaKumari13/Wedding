@@ -66,7 +66,7 @@ export default function Footer() {
               <Facebook className="w-5 h-5" />
             </Link>
             <Link 
-              href="https://instagram.com" 
+              href="https://www.instagram.com/princessweddinghk/" 
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-[#d4a853] transition-colors"
