@@ -25,7 +25,7 @@ export default function Homepage() {
                 {/* Background Image with Next.js Image component */}
                 <div className="absolute inset-0">
                     <Image
-                        src="/images/Banner Original.png"
+                        src="/images/Banner.jpg"
                         alt="Wedding Banner"
                         fill
                         priority
