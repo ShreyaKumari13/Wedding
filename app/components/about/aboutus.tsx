@@ -32,7 +32,7 @@ export default function AboutUs() {
       <div className="flex justify-between items-start max-w-7xl mx-auto ">
         <div className="relative w-[400px] h-[467px] overflow-hidden">
           <Image
-            src="/about/about us 1.png"
+            src="/about/about us 1.jpg"
             alt="Outdoor wedding decoration with flowers on a pier"
             fill
             className="object-cover rounded-lg"
@@ -41,7 +41,7 @@ export default function AboutUs() {
         <div className="mt-[20vh]">
           <div className="relative w-[400px] h-[467px] overflow-hidden">
             <Image
-              src="/about/about us 2.png"
+              src="/about/about us 2.jpg"
               alt="Elegant indoor table setting with chandelier"
               fill
               className="object-cover rounded-lg"
@@ -50,7 +50,7 @@ export default function AboutUs() {
         </div>
         <div className="relative w-[400px] h-[467px] overflow-hidden">
           <Image
-            src="/about/about us 3.png"
+            src="/about/about us 3.jpg"
             alt="Decorated dining table with floral arrangements"
             fill
             className="object-cover rounded-lg"

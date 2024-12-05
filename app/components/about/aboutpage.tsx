@@ -45,7 +45,7 @@ export default function AboutPage() {
                     <div className="absolute inset-0 pb-16 pt-14">
                         <div className="relative w-full h-[630px]">
                             <Image
-                                src="/about/Banner_Mask group.png"
+                                src="/about/Banner original.jpg"
                                 alt="About Us Banner"
                                 fill
                                 priority

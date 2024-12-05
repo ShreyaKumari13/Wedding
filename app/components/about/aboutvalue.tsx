@@ -64,7 +64,7 @@ export default function AboutValue() {
                 {/* Central Image */}
                 <div className="relative aspect-square rounded-2xl overflow-hidden">
                     <Image
-                        src="/about/Values.png"
+                        src="/about/Values.jpg"
                         alt="Elegant wedding venue with glass ceiling"
                         fill
                         priority
