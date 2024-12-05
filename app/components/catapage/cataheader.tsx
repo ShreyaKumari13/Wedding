@@ -12,24 +12,29 @@ const cinzel = Cinzel({
 
 const navigationItems = [
   {
-    title: "Wedding Dresses & Attire",
+    title: "Wedding Dress Rental",
     href: "/catalogue",
     id: "dresses"
   },
   {
-    title: "Decorations & Accessories",
-    href: "/catalogue/decorations",
-    id: "decorations"
+    title: "Wedding Photography and Videography",
+    href: "/catalogue/photography",
+    id: "photography"
   },
   {
-    title: "Invitations & Stationery",
-    href: "/catalogue/invitations",
-    id: "invitations"
+    title: "Pre-Wedding Photoshoot",
+    href: "/catalogue/photoshoot",
+    id: "photoshoot"
   },
   {
-    title: "Favors & Gifts",
-    href: "/catalogue/favors",
-    id: "favors"
+    title: "Bridal Makeup and Hairstyling",
+    href: "/catalogue/makeup",
+    id: "makeup"
+  },
+  {
+    title: "Wedding Betrothal Ceremony",
+    href: "/catalogue/ceremony",
+    id: "ceremony"
   },
 ]
 
@@ -47,13 +52,13 @@ export function CataHeader({ activeSection }: CataHeaderProps) {
   return (
     <header className="max-w-7xl mx-auto border-b bg-white py-4">
       <div className="px-4 py-6">
-        <h1 className={`${cinzel.className} mb-6 text-left text-[27px] font-[700] leading-[36.4px] text-[#1A281F]`}>
+        <h1 className={`${cinzel.className} mb-6 text-center text-[27px] font-[700] leading-[36.4px] text-[#1A281F]`}>
           Discover Our Extensive Catalog Filled With Everything You Need
           <br />
           For Your Special Day:
         </h1>
-        <nav>
-          <ul className="flex items-center justify-between">
+        <nav className="overflow-x-auto">
+          <ul className="flex flex-wrap items-center justify-center gap-4 min-w-max px-4">
             {navigationItems.map((item) => {
               const isActive = activeSection ? item.id === activeSection : pathname === item.href;
               return (
@@ -61,7 +66,7 @@ export function CataHeader({ activeSection }: CataHeaderProps) {
                   <Link
                     href={item.href}
                     className={cn(
-                      `${cinzel.className} inline-block whitespace-nowrap rounded-md px-4 py-2 text-[21px] font-[900] leading-[25.2px] text-left transition-colors`,
+                      `${cinzel.className} inline-block whitespace-nowrap rounded-md px-3 py-2 text-[18px] md:text-[21px] font-[900] leading-[25.2px] text-left transition-colors`,
                       isActive
                         ? "bg-[#B17406] text-[#FFFFFF] hover:bg-[#D9A441] hover:text-[#FFFFFF]"
                         : "bg-white text-[#1A281F] hover:bg-[#F0E6D2] hover:text-[#1A281F]"
@@ -181,4 +186,3 @@ export function CataHeader({ activeSection }: CataHeaderProps) {
     </header>
   )
 }
-
