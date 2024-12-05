@@ -4,6 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Cinzel } from 'next/font/google'
 import { usePathname } from 'next/navigation'
+import React from 'react'
 
 const cinzel = Cinzel({
   subsets: ['latin'],
@@ -43,11 +44,69 @@ const cn = (...classes: string[]) => {
 }
 
 interface CataHeaderProps {
-  activeSection?: string;
+  activeSection: string;
 }
+
+const getImagesForSection = (section: string) => {
+  const imageMappings = {
+    dresses: [
+      '/imgcata/dresses/1.jpg',
+      '/imgcata/dresses/2.jpg',
+      '/imgcata/dresses/3.jpg',
+      '/imgcata/dresses/4.jpg',
+      '/imgcata/dresses/5.jpg',
+      '/imgcata/dresses/6.jpg',
+      '/imgcata/dresses/7.jpg',
+      '/imgcata/dresses/8.jpg',
+    ],
+    photography: [
+      '/imgcata/photography/1.jpg',
+      '/imgcata/photography/2.jpg',
+      '/imgcata/photography/3.jpg',
+      '/imgcata/photography/4.jpg',
+      '/imgcata/photography/5.jpg',
+      '/imgcata/photography/6.jpg',
+      '/imgcata/photography/7.jpg',
+      '/imgcata/photography/8.jpg',
+    ],
+    photoshoot: [
+      '/imgcata/photoshoot/1.jpg',
+      '/imgcata/photoshoot/2.jpg',
+      '/imgcata/photoshoot/3.jpg',
+      '/imgcata/photoshoot/4.jpg',
+      '/imgcata/photoshoot/5.jpg',
+      '/imgcata/photoshoot/6.jpg',
+      '/imgcata/photoshoot/7.jpg',
+      '/imgcata/photoshoot/8.jpg',
+    ],
+    makeup: [
+      '/imgcata/makeup/1.jpg',
+      '/imgcata/makeup/2.jpg',
+      '/imgcata/makeup/3.jpg',
+      '/imgcata/makeup/4.jpg',
+      '/imgcata/makeup/5.jpg',
+      '/imgcata/makeup/6.jpg',
+      '/imgcata/makeup/7.jpeg',
+      '/imgcata/makeup/8.jpg',
+    ],
+    ceremony: [
+      '/imgcata/dresses/1.jpg',
+      '/imgcata/dresses/2.jpg',
+      '/imgcata/dresses/3.jpg',
+      '/imgcata/dresses/4.jpg',
+      '/imgcata/dresses/5.jpg',
+      '/imgcata/dresses/6.jpg',
+      '/imgcata/dresses/7.jpg',
+      '/imgcata/dresses/8.jpg',
+    ],
+  };
+
+  return imageMappings[section as keyof typeof imageMappings] || imageMappings.dresses;
+};
 
 export function CataHeader({ activeSection }: CataHeaderProps) {
   const pathname = usePathname();
+  const images = getImagesForSection(activeSection);
   
   return (
     <header className="max-w-7xl mx-auto border-b bg-white py-4">
@@ -87,7 +146,7 @@ export function CataHeader({ activeSection }: CataHeaderProps) {
           <div className="col-span-3 row-span-5 relative flex flex-col">
             <div className="relative flex-1">
               <Image
-                src="/imgservice/1.png"
+                src={images[0]}
                 alt="Elegant white-themed outdoor venue with floral arch"
                 fill
                 className="object-cover"
@@ -99,7 +158,7 @@ export function CataHeader({ activeSection }: CataHeaderProps) {
           <div className="col-start-4 col-span-5 row-span-3 relative flex flex-col">
             <div className="relative flex-1">
               <Image
-                src="/imgservice/2.png"
+                src={images[1]}
                 alt="Elegant multi-tiered dessert and catering display"
                 fill
                 className="object-cover"
@@ -111,7 +170,7 @@ export function CataHeader({ activeSection }: CataHeaderProps) {
           <div className="col-start-1 col-span-4 row-start-6 row-span-3 relative flex flex-col">
             <div className="relative flex-1">
               <Image
-                src="/imgservice/3.png"
+                src={images[2]}
                 alt="Luxurious hanging floral installation with crystal decorations"
                 fill
                 className="object-cover"
@@ -123,7 +182,7 @@ export function CataHeader({ activeSection }: CataHeaderProps) {
           <div className="col-start-5 col-span-4 row-start-4 row-span-5 relative flex flex-col">
             <div className="relative flex-1">
               <Image
-                src="/imgservice/4.png"
+                src={images[3]}
                 alt="Romantic couple photo at historic venue"
                 fill
                 className="object-cover"
@@ -138,7 +197,7 @@ export function CataHeader({ activeSection }: CataHeaderProps) {
           <div className="col-span-3 row-span-5 relative flex flex-col">
             <div className="relative flex-1">
               <Image
-                src="/imgservice/1.png"
+                src={images[4]}
                 alt="Elegant white-themed outdoor venue with floral arch"
                 fill
                 className="object-cover"
@@ -150,7 +209,7 @@ export function CataHeader({ activeSection }: CataHeaderProps) {
           <div className="col-start-4 col-span-5 row-span-3 relative flex flex-col">
             <div className="relative flex-1">
               <Image
-                src="/imgservice/2.png"
+                src={images[5]}
                 alt="Elegant multi-tiered dessert and catering display"
                 fill
                 className="object-cover"
@@ -162,7 +221,7 @@ export function CataHeader({ activeSection }: CataHeaderProps) {
           <div className="col-start-1 col-span-4 row-start-6 row-span-3 relative flex flex-col">
             <div className="relative flex-1">
               <Image
-                src="/imgservice/3.png"
+                src={images[6]}
                 alt="Luxurious hanging floral installation with crystal decorations"
                 fill
                 className="object-cover"
@@ -174,7 +233,7 @@ export function CataHeader({ activeSection }: CataHeaderProps) {
           <div className="col-start-5 col-span-4 row-start-4 row-span-5 relative flex flex-col">
             <div className="relative flex-1">
               <Image
-                src="/imgservice/4.png"
+                src={images[7]}
                 alt="Romantic couple photo at historic venue"
                 fill
                 className="object-cover"
