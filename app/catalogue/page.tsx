@@ -1,13 +1,12 @@
-import React from 'react';
-import CataHome from '../components/catapage/catahome';
-import { CataHeader } from '../components/catapage/cataheader';
+'use client'
 
-export default function Catalogue() {
+import { CataHeader } from "@/app/components/catapage/cataheader"
+import Footer from "@/app/components/footer"
+
+export default function CataloguePage() {
   return (
-    <main>
-
-      <CataHome />
-      <CataHeader />
+    <main className="flex min-h-screen flex-col">
+      <CataHeader activeSection="dresses" />
     </main>
-  );
+  )
 }
