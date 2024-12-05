@@ -97,7 +97,7 @@ const getImagesForSection = (section: string) => {
       '/imgcata/betrothal/5.jpg',
       '/imgcata/betrothal/6.jpg',
       '/imgcata/betrothal/7.jpg',
-      '/imgcata/betrothal/8.jpg',
+      '/imgcata/betrothal/8.JPG',
     ],
   };
 
